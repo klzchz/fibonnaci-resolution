@@ -9,7 +9,8 @@
 
 ## Explanation
 
-<pre>// 1)
+<pre>
+ 1)
  the time complexity of the recursive Fibonacci function is exponential,
   specifically O(2^n), where n is the input count. This means that as the input count grows, 
   the time required to calculate the Fibonacci number increases exponentially.
@@ -22,5 +23,6 @@
  fibonnaci = 94 or higher
  1.2200160415122E+19
 
- the problem of the function is what I explained above imagine recursively calcs each time the right is to simplify the 
+ the problem of the function is what I explained above imagine recursively
+  calcs each time the right is to simplify the 
  function to manage memory in low scale</pre>
