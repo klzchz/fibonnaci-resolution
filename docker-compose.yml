@@ -10,8 +10,6 @@ services:
         working_dir: /var/www/
         volumes:
             - ./:/var/www
-        depends_on:
-            - redis
         networks:
             - laravel
 
@@ -27,8 +25,8 @@ services:
         networks:
             - laravel
 
-    # db mysql
     db:
+        platform: linux/x86_64
         image: mysql:5.7.22
         restart: unless-stopped
         environment:
@@ -43,24 +41,6 @@ services:
         networks:
             - laravel
 
-    # queue
-    queue:
-        image: especializati/laravel9-app
-        restart: unless-stopped
-        command: "php artisan queue:work"
-        volumes:
-            - ./:/var/www
-        depends_on:
-            - redis
-            - app
-        networks:
-            - laravel
-
-    # redis
-    redis:
-        image: redis:latest
-        networks:
-            - laravel
 
 networks:
     laravel:
