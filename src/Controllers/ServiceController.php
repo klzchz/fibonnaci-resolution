@@ -15,8 +15,15 @@ class ServiceController {
 
 
     protected function runServices($params){
+
+        $arr = [
+            'n'=>$this->fibonnaciRight->service($params),
+            'client'=>"you're in a beta test",
+            'ip'=>$_SERVER['REMOTE_ADDR'],
+            'status_code'=>201
+        ];
      
-        echo $this->fibonnaciRight->service($params);
+        echo json_encode($arr);
 
     }
 
