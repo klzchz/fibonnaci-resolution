@@ -2,9 +2,21 @@
 
 <pre>docker-compose up -d</pre>
 
+<h2>Acces the app container in bash</h2>
+<pre>docker-compose exec app bash </pre>
+
+<h2>Get the dependencies</h2>
+<pre>composer install </pre>
+
 <h2>Usage Fibonnaci Resolution</h2>
 
 <pre>http://localhost:8989/?number=10</pre>
+
+
+## Tutorial 
+<pre>
+    https://www.loom.com/share/05afd1b359e744028190ad8216241387
+</pre>
 
 
 ## Explanation
