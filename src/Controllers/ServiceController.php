@@ -1,19 +1,20 @@
 <?php
 
-namespace Service\controllers;
+namespace Kernel\Controllers;
 
-use Service\interfaces\ServiceInterface;
+
+use Kernel\Interfaces;
 
 class ServiceController {
     public $fibonnaciRight;
-    public function __construct(ServiceInterface $serviceInterface,...$params = null)
+    public function __construct($serviceInterface)
     {       
             $this->fibonnaciRight = $serviceInterface;
             $this->runServices($this->fibonnaciRight->validation());
     }
 
 
-    protected function runServices($params) {
+    protected function runServices($params){
      
         echo $this->fibonnaciRight->service($params);
 

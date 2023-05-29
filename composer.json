@@ -1,16 +1,14 @@
 {
-    "name": "root/www",
+    "name": "test/fibonnaci",
+ 
+    "authors": [{
+        "name": "Lucas Andrade",
+        "email": "lucascorporation@live.com"
+    }],
+    "require": {},
     "autoload": {
         "psr-4": {
-            "Service\\": "src/"
+            "Kernel\\": "src/"
         }
-    },
-    "authors": [
-        {
-            "name": "Lucas Andrade"
-        }
-    ],
-    "require-dev": {
-        
     }
 }

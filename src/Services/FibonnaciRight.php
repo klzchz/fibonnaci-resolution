@@ -1,10 +1,15 @@
 <?php
 
-namespace Service\services;
+namespace Kernel\Services;
 
-use Service\interfaces\ServiceInterface;
+use Kernel\Interfaces\ServiceInterface;
 
  class FibonnaciRight implements ServiceInterface {
+
+    public function validation()
+    {
+        return !(isset($_GET['number'])) ? $n = 100  : $n = $_GET['number'];
+    }
 
     public function service($param) {
         $prev = 0;
